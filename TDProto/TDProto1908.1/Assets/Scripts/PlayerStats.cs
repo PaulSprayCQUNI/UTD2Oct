@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
 
     public static int Creds;
-    public int startCreds = 400;
+    public int startCreds = 1000;
 
     private
 
