@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BuildManagement : MonoBehaviour
 {
+    public int minCreds = 100;
 
 	/* every time the game starts their will be one instance of BuildManagement 
 	put into the instance variable and accessed from anywhere - important that we are only
@@ -37,7 +38,12 @@ public class BuildManagement : MonoBehaviour
         get { return PlayerStats.Creds >= turretToBuild.schemaCost; }   
     }
 
-    public void BuildTurretOn(NodeInterface node)
+    public bool lowCreds
+    {
+        get { return PlayerStats.Creds <= minCreds; }
+    }
+
+    public void BuildTurretOn(NodeBehavior node)
     {
 
         if (PlayerStats.Creds < turretToBuild.schemaCost)
@@ -47,10 +53,13 @@ public class BuildManagement : MonoBehaviour
         }
 
         PlayerStats.Creds -= turretToBuild.schemaCost;
-        
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret;
 
+        // todo - an object that follows the mouse pointer and displays an icon of the selected turret until instantiate occurs
+
+        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        node.turret = turret; 
+        
+        
         Debug.Log("Turret Built, Creds remaining: " + PlayerStats.Creds);
     }
 
