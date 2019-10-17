@@ -24,6 +24,8 @@ public class BuildManagement : MonoBehaviour
 	public GameObject standardTurretPrefab;
     public GameObject missileLauncherPrefab;
 
+    public GameObject buildEffect;
+
 	
 	private TurretSchema turretToBuild;
 
@@ -57,7 +59,10 @@ public class BuildManagement : MonoBehaviour
         // todo - an object that follows the mouse pointer and displays an icon of the selected turret until instantiate occurs
 
         GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret; 
+        node.turret = turret;
+
+        GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 2f);
         
         
         Debug.Log("Turret Built, Creds remaining: " + PlayerStats.Creds);
