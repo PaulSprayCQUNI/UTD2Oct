@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     private Transform target;
 
     public float bulletSpeed = 50f;
+	public int bulletDamage = 50;
+
     public GameObject bulletImpactEffect;
 	public float missileExplosionRadius = 0f;
     public void TargetSeek(Transform _target)
@@ -71,11 +73,18 @@ public class Bullet : MonoBehaviour
 		}
 	}
 
+	// 18 Oct - adding component from EnemyMovement to bullet so that health damage effect is what occurs to the Transform enemy,
+	// rather than total destruction
 	void DamageEnemy(Transform enemy)
 	{
+		
+		EnemyMovement e = enemy.GetComponent<EnemyMovement>();
 
-		Destroy(enemy.gameObject);
-	
+		if (e != null)
+		{
+		e.HitDamage(bulletDamage);
+		}
+					
 	}
 
 	void onDrawGizmosSelected()
