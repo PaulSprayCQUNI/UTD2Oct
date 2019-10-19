@@ -5,12 +5,20 @@ using UnityEngine;
 public class GameMistress : MonoBehaviour
 {
     
-	private bool gameEnded = false;
+	public static bool GameOverMan = false;
+
+    public GameObject gameOverUI;
+
     void Update()
     {
-		if (gameEnded)
+		if (GameOverMan)
 			return;
-    
+
+        if(Input.GetKeyDown("e"))
+        {
+            EndGame();
+        }
+
 		if (PlayerStats.Lives <= 0)
 		{
 			EndGame();
@@ -20,9 +28,11 @@ public class GameMistress : MonoBehaviour
 
 	void EndGame()
 	{
-		gameEnded = true;
-		Debug.Log("Game is over");
-		//scene manager load scene prompt	
+
+		GameOverMan = true;
+        gameOverUI.SetActive(true);
+        
+        //scene manager load scene prompt	
 	}
 
 }

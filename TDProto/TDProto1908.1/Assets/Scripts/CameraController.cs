@@ -16,6 +16,12 @@ public class CameraController : MonoBehaviour
     void Update()
 
     {
+
+        if (GameMistress.GameOverMan)
+        {
+            this.enabled = false;
+            return;
+        }
         
 		if (Input.GetKeyDown(KeyCode.Q))
 			panToggle = !panToggle;

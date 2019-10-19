@@ -6,6 +6,12 @@ public class LivesCount : MonoBehaviour
 	public Text LivesText;
     void Update()
     {
-	    LivesText.text = PlayerStats.Lives.ToString() + " LIVES:";
+        if (GameMistress.GameOverMan)
+        {
+            this.enabled = false;
+            return;
+        }
+
+        LivesText.text = PlayerStats.Lives.ToString() + " LIVES:";
     }
 }
