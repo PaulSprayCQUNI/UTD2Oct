@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Text wavesText;
+
+    // like Start() but called everytime a game object gets enabled
+
+    private void OnEnable()
     {
-        
+        wavesText.text = PlayerStats.Waves.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Retry()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+
+    public void Menu ()
+    {
+        Debug.Log("Go to menu");
     }
 }

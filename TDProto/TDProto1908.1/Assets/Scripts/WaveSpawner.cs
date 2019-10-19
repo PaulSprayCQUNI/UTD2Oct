@@ -43,6 +43,7 @@ public class WaveSpawner : MonoBehaviour
 		}	
 
 		waveIndex++;
+        PlayerStats.Waves++;
 	}
 	
 	void SpawnEnemy()
