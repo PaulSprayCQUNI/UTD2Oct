@@ -5092,6 +5092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 566773828}
   - component: {fileID: 566773829}
+  - component: {fileID: 566773830}
   m_Layer: 5
   m_Name: GameOverUI
   m_TagString: Untagged
@@ -5136,6 +5137,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wavesText: {fileID: 864181223}
+--- !u!95 &566773830
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566773827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68061ef89cadcd24189a1f9b161d4e03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &578493735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8555,6 +8575,7 @@ GameObject:
   - component: {fileID: 864181224}
   - component: {fileID: 864181223}
   - component: {fileID: 864181222}
+  - component: {fileID: 864181225}
   m_Layer: 5
   m_Name: WavesLivedThrough
   m_TagString: Untagged
@@ -8639,6 +8660,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864181220}
   m_CullTransparentMesh: 0
+--- !u!225 &864181225
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864181220}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &873879980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11328,6 +11361,7 @@ GameObject:
   - component: {fileID: 1115149589}
   - component: {fileID: 1115149588}
   - component: {fileID: 1115149587}
+  - component: {fileID: 1115149590}
   m_Layer: 5
   m_Name: GamerOverMessage
   m_TagString: Untagged
@@ -11411,6 +11445,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115149585}
   m_CullTransparentMesh: 0
+--- !u!225 &1115149590
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115149585}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1119630484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14482,6 +14528,7 @@ GameObject:
   - component: {fileID: 1497012640}
   - component: {fileID: 1497012639}
   - component: {fileID: 1497012638}
+  - component: {fileID: 1497012641}
   m_Layer: 5
   m_Name: MenuBtn
   m_TagString: Untagged
@@ -14533,7 +14580,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 1.16
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -14599,6 +14646,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497012636}
   m_CullTransparentMesh: 0
+--- !u!225 &1497012641
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497012636}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1503399133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15971,6 +16030,7 @@ GameObject:
   - component: {fileID: 1631374672}
   - component: {fileID: 1631374671}
   - component: {fileID: 1631374670}
+  - component: {fileID: 1631374673}
   m_Layer: 5
   m_Name: RetryBtn
   m_TagString: Untagged
@@ -16088,6 +16148,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631374668}
   m_CullTransparentMesh: 0
+--- !u!225 &1631374673
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631374668}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1631662347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20611,6 +20683,7 @@ GameObject:
   - component: {fileID: 2032463882}
   - component: {fileID: 2032463884}
   - component: {fileID: 2032463883}
+  - component: {fileID: 2032463885}
   m_Layer: 5
   m_Name: GameOverMenu
   m_TagString: Untagged
@@ -20674,6 +20747,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032463881}
   m_CullTransparentMesh: 0
+--- !u!225 &2032463885
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032463881}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &2049279600
 PrefabInstance:
   m_ObjectHideFlags: 0
