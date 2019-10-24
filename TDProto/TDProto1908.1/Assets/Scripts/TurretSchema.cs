@@ -7,4 +7,7 @@ public class TurretSchema
 {
     public GameObject prefab;
     public int schemaCost;
+
+    public GameObject upgradedPrefab;
+    public int upgradeCost;
 }

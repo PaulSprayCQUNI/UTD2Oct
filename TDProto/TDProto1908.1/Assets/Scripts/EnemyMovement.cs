@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 	private int wavepointIndex = 0;
 
     private Enemy enemy;
+   // private Enemy overlordEnemy;
 
 	void Start()
     {
@@ -16,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
 	}
 
 	// dir normalized so the only thing that controls speed is the public float speed
-	// deltaTime accounting for framerats variation
+	// deltaTime accounting for frame rates variation
 	void Update()
 	{
 		Vector3 dir = target.position - transform.position;

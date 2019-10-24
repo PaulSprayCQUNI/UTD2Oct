@@ -27,6 +27,9 @@ public class BuildManagement : MonoBehaviour
 
 	
 	private TurretSchema turretToBuild;
+    private NodeBehavior selectedNode;
+
+    public TurretSelectionUI turretSelectUI;
 
     // 1st October introducing a property of public bool variable called CanBuild
     public bool CanBuild
@@ -44,32 +47,49 @@ public class BuildManagement : MonoBehaviour
         get { return PlayerStats.Creds <= minCreds; }
     }
 
-    public void BuildTurretOn(NodeBehavior node)
-    {
+    /*
+     * Code previously using an instance of NodeBehaviour as a parameter and referencing
+     * turretToBuild in this class are moved to NodeBehavior
+     * old function header was public void BuildTurretOn(NodeBehavior node)  {...}
+     */
 
-        if (PlayerStats.Creds < turretToBuild.schemaCost)
+    /* the following two functions are written so that when one is enabled,
+     the other is disabled so only a node, with a built turret on it, or a turret 
+     selected to be built on a node is selected at one time*/
+
+    public void SelectNode(NodeBehavior node)
+    {
+        if (selectedNode == node)
         {
-            Debug.Log("Not enough creds to build that!");
+            DeselectNode();
             return;
         }
 
-        PlayerStats.Creds -= turretToBuild.schemaCost;
+        selectedNode = node;
+        turretToBuild = null;
 
-        // todo - an object that follows the mouse pointer and displays an icon of the selected turret until instantiate occurs
-
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret;
-
-        GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
-        Destroy(effect, 2f);
-        
-        
-        Debug.Log("Turret Built, Creds remaining: " + PlayerStats.Creds);
+        turretSelectUI.SelectionTarget(node);
     }
 
-	public void SelectTurretToBuild(TurretSchema turret)
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        turretSelectUI.Hide();
+
+    }
+
+    public void SelectTurretToBuild(TurretSchema turret)
     {
         turretToBuild = turret;
+        DeselectNode();
+        
     }
+
+    public TurretSchema GetTurretToBuild()
+    {
+        return turretToBuild;
+    }
+
+  
 
 }
