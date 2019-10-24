@@ -1,10 +1,13 @@
-﻿
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class TurretSelectionUI : MonoBehaviour
 {
     public GameObject selectUI;
 
+	public Text upgradeCost;
+	public Button upgradeButton;
+	
     private NodeBehavior target;
 
     public void SelectionTarget(NodeBehavior _target)
@@ -13,7 +16,18 @@ public class TurretSelectionUI : MonoBehaviour
 
         transform.position = target.GetBuildPosition();
 
-        selectUI.SetActive(true);
+		if(!target.isUpgraded)
+		{
+			upgradeCost.text = "$ " + target.turretSchema.upgradeCost;
+			upgradeButton.interactable = true;
+			
+		} else
+		{
+			upgradeCost.text = "Maxed";
+			upgradeButton.interactable = false;
+		}
+		
+		 selectUI.SetActive(true);
     }
 
     public void Hide()
