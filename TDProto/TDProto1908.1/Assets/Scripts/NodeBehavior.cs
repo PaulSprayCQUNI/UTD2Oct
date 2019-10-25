@@ -128,9 +128,12 @@ public class NodeBehavior : MonoBehaviour
     {
 	    PlayerStats.Creds += turretSchema.GetSellAmount();
 
-		// sell effect - todo
-	    Destroy(turret);
+        GameObject effect = (GameObject)Instantiate(buildManagement.saleEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 2f);
+
+        Destroy(turret);
 	    turretSchema = null;
+        isUpgraded = false;
     }
 
 	void OnMouseEnter ()

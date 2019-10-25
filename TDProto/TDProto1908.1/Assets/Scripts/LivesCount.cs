@@ -12,6 +12,6 @@ public class LivesCount : MonoBehaviour
             return;
         }
 
-        LivesText.text = PlayerStats.Lives.ToString() + " LIVES";
+        LivesText.text = "Lives: " + PlayerStats.Lives.ToString();
     }
 }

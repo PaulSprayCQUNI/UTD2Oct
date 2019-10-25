@@ -6,10 +6,10 @@ public class PlayerStats : MonoBehaviour
 {
 
     public static int Creds;
-    public int startCreds = 1000;
+    public int startCreds = 500;
 
     public static int Lives;
-	public int startLives = 10;
+	public int startLives = 1;
 
     public static int Waves;
 

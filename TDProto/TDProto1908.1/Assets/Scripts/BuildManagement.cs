@@ -24,9 +24,10 @@ public class BuildManagement : MonoBehaviour
     public GameObject missileLauncherPrefab;
 
     public GameObject buildEffect;
+    public GameObject saleEffect;
 
-	
-	private TurretSchema turretToBuild;
+
+    private TurretSchema turretToBuild;
     private NodeBehavior selectedNode;
 
     public TurretSelectionUI turretSelectUI;
