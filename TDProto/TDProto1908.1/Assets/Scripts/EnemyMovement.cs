@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
 	private int wavepointIndex = 0;
 
     private Enemy enemy;
-   // private Enemy overlordEnemy;
+   
 
 	void Start()
     {
