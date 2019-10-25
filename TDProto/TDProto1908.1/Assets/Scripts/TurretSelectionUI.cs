@@ -7,6 +7,9 @@ public class TurretSelectionUI : MonoBehaviour
 
 	public Text upgradeCost;
 	public Button upgradeButton;
+
+	public Text sellValue;
+	public Button SellButton;
 	
     private NodeBehavior target;
 
@@ -27,8 +30,12 @@ public class TurretSelectionUI : MonoBehaviour
 			upgradeButton.interactable = false;
 		}
 		
-		 selectUI.SetActive(true);
+		sellValue.text = "$" + target.turretSchema.GetSellAmount();
+	    
+		selectUI.SetActive(true);
     }
+
+	
 
     public void Hide()
     {
@@ -39,4 +46,12 @@ public class TurretSelectionUI : MonoBehaviour
         target.UpgradeTurret();
         BuildManagement.instance.DeselectNode();
     }
+
+    public void Sell()
+    {
+	    target.SellTurret();
+	    BuildManagement.instance.DeselectNode();
+
+    }
+
 }

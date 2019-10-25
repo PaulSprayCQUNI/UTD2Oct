@@ -123,6 +123,16 @@ public class NodeBehavior : MonoBehaviour
         isUpgraded = true;
         Debug.Log("Turret Upgraded!");
     }
+
+    public void SellTurret()
+    {
+	    PlayerStats.Creds += turretSchema.GetSellAmount();
+
+		// sell effect - todo
+	    Destroy(turret);
+	    turretSchema = null;
+    }
+
 	void OnMouseEnter ()
 	{
 

@@ -10,4 +10,9 @@ public class TurretSchema
 
     public GameObject upgradedPrefab;
     public int upgradeCost;
+
+	public int GetSellAmount()
+	{
+		return schemaCost / 2;
+	}
 }

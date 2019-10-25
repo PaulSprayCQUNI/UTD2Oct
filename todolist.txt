@@ -1,0 +1,6 @@
+todo - upgrade missile launcher / or replace text through script...w
+- final upgrade and sell functions
+- overlord instantiate, movement, effect(downgrade turret power?)
+- overlord look toward waypointe
+- overlord defeat effect - level beat?
+- check sell sets isUpgraded to false again....
