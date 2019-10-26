@@ -22,10 +22,12 @@ public class GameMistress : MonoBehaviour
 		if (GameOverMan)
 			return;
 
+/* can be uncommented to enable keydown of 'e' for easier testing involving end game scenarios
         if(Input.GetKeyDown("e"))
         {
             EndGame();
         }
+ */
 
 		if (PlayerStats.Lives <= 0)
 		{
