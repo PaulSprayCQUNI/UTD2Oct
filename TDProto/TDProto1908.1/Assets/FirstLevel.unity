@@ -24072,7 +24072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c6b408bc2e0a1488a3e4b68d3e8d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlordPrefab: {fileID: 4410131977844434296, guid: 3663189c0c19ba046b8db2f2af80c3d7,
+  overlordPrefab: {fileID: 6778115769990964193, guid: 3663189c0c19ba046b8db2f2af80c3d7,
     type: 3}
   overlordspawnPoint: {fileID: 2071917717}
   overlordArrival: 30
