@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08bfcf66dc6fc3418dcc6a1948605a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
   enemyHealth: 100
-  enemyCred: 10
+  enemyCred: 20
   deathEffect: {fileID: 5649267886752150862, guid: 2e753df01a2e66148be80ac40ec35942,
     type: 3}
