@@ -1,20 +1,24 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
 
-	public string levelToLoad = "FirstLevel";
+    public string levelToLoad = "FirstLevel";
 
-	public void Play()
-	{
-		SceneManager.LoadScene(levelToLoad);
-	}
+    public void Play()
+    {
+        Debug.Log("Play");
+        SceneManager.LoadScene("FirstLevel");
+    }
 
-   public void Quit()
-   {
-	   Debug.Log("Quit/Exit program function called");
-	   Application.Quit();
-   }
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quit");
+
+    }
+
 }
