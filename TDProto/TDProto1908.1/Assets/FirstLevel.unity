@@ -7605,7 +7605,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 9acfa7ca74dc57941951526e0c7667e5, type: 3}
     m_FontSize: 120
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 200
     m_Alignment: 4
@@ -7614,7 +7614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 125
+  m_Text: 'Waves survived:'
 --- !u!222 &864181224
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9968,7 +9968,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: c98285cdde6664941a855a67246ffd3d, type: 3}
-    m_FontSize: 30
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9979,7 +9979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wave/s lived through
+  m_Text: 'Wave/s survived:'
 --- !u!222 &1094801329
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15778,7 +15778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wave/s survived
+  m_Text: 'Wave/s survived:'
 --- !u!225 &1692760736
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17549,7 +17549,7 @@ GameObject:
   - component: {fileID: 1926610826}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

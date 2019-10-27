@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 1765339663}
   - component: {fileID: 1765339662}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Instructions Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1409,9 +1409,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Select Play to play the prototype level.\n\nIn-level Camera control: AWSD
-    / Mouse to Pan Camera \n(Wheel to Zoom)\nQ to toggle camera movement\nEscape or
-    P to Pause\n"
+  m_Text: "Select Play to play the prototype Tower Defense level\n(defeat 7 waves
+    for a win)\n\nIn-level Camera control: AWSD / Mouse to Pan Camera \n(Wheel to
+    Zoom)\nQ to toggle camera movement\nEscape or P to Pause\n"
 --- !u!222 &1920150587
 CanvasRenderer:
   m_ObjectHideFlags: 0
