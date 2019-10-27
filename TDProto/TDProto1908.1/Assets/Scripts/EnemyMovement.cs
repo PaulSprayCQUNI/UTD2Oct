@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
 	{
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
+        transform.LookAt(target);
 
 		if (Vector3.Distance (transform.position, target.position) <= 0.4f)
 		{
@@ -45,6 +46,7 @@ public class EnemyMovement : MonoBehaviour
 	void FinalWaypoint()
 	{
 		PlayerStats.Lives--;
+        WaveSpawner.EnemiesAlive--;
 		Destroy(gameObject);
 	}
 

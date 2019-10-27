@@ -9,6 +9,7 @@ public class GameMistress : MonoBehaviour
 	public static bool GameOverMan;
 
     public GameObject gameOverUI;
+    public GameObject levelCompleteUI;
 
     void Start()
     {
@@ -38,11 +39,14 @@ public class GameMistress : MonoBehaviour
 
 	void EndGame()
 	{
-
-		GameOverMan = true;
+        GameOverMan = true;
         gameOverUI.SetActive(true);
-        
-        //scene manager load scene prompt	
-	}
+    }
 
+    public void LevelWin()
+    {
+        GameOverMan = true;
+        levelCompleteUI.SetActive(true);
+    }
+    
 }

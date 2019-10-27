@@ -239,11 +239,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 406d890576a3f664e981934e5b2a9453, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -367,7 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  enemyHealth: 100
+  enemyStartHealth: 100
   enemyCred: 20
   deathEffect: {fileID: 5649267886752150862, guid: 2e753df01a2e66148be80ac40ec35942,
     type: 3}
+  healthBar: {fileID: 1374708095}
